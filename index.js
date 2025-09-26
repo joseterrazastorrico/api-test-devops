@@ -24,11 +24,9 @@ app.get("/", (req, res) => {
 app.post("/chat", async (req, res) => {
   const { pregunta } = req.body;
   if (!pregunta || typeof pregunta !== "string" || pregunta.trim() === "") {
-    return res
-      .status(400)
-      .json({
-        error: "La propiedad pregunta es obligatoria y no debe estar vacía",
-      });
+    return res.status(400).json({
+      error: "La propiedad pregunta es obligatoria y no debe estar vacía",
+    });
   }
 
   // Si MOCK_API es true, responde con mock
