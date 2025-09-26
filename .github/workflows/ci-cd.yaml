@@ -9,7 +9,7 @@ on:
   pull_request:
     branches:
       - main
-  
+
 jobs:
   setup:
     name: Checkout y Setup de dependencias
